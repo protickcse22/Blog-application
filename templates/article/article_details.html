@@ -1,0 +1,14 @@
+{% extends 'main_app/base.html' %}
+
+{% block body %}
+
+<div class="container">
+    <div class="jumbotron">
+        <h3 class="display-5 text-center">{{ article_detai.title }}</h3>
+        <img src="{{article_detail.thumb.url}}"
+        <h5 class="display-5">{{ article_detail.date }}</h5>
+        <p class="lear">{{ article_detail.body }}</p>
+    </div>
+</div>
+
+{% endblock %}

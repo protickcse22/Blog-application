@@ -1,0 +1,15 @@
+{% extends 'main_app/base.html' %}
+
+{% block body %}
+
+<div class="container">
+    <div class="jumbotron">
+        {% for article in object_list %}
+        <h3 class="display-4 text-center"><a href="{% url 'article:detail' slug=article.slug %}">{{ article.title }}</a></h4>
+        <h5 class="display-5">{{ article.date }}</h5>
+        <p class="lear">{{ article.snippet }}</p>
+        {% endfor %}
+    </div>
+</div>
+
+{% endblock %}
